@@ -10,6 +10,7 @@ export default {
 			},
 			fontFamily: {
 				manrope: ['Manrope', 'sans-serif'],
+				lobster: ['Lobster', 'cursive'],
 			},
 		},
 		container: {
@@ -23,5 +24,5 @@ export default {
 			},
 		},
 	},
-	plugins: [],
+	plugins: [require('daisyui')],
 };
