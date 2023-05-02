@@ -1,11 +1,11 @@
 import React from 'react';
-// import Banner from './Banner';
+import Banner from './Banner';
 // import ChefCard from './ChefCard';
 
 const Home = () => {
 	return (
 		<div>
-			{/* <Banner /> */}
+			<Banner />
 			{/* <div className='my-20 text-center'>
 				<h2 className='text-4xl font-bold Active'>Our Chefs</h2>
 				<p className='max-w-md mx-auto my-2'>
