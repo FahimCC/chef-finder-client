@@ -6,6 +6,7 @@ import Home from '../pages/home/Home';
 import ErrorPage from '../pages/shared/ErrorPage';
 import Login from '../pages/sign-up-in/Login';
 import Register from '../pages/sign-up-in/Register';
+import ProtectedRoute from './ProtectedRoute';
 
 const router = createBrowserRouter([
 	{
@@ -19,7 +20,11 @@ const router = createBrowserRouter([
 			},
 			{
 				path: '/chef-details',
-				element: <ChefDetails />,
+				element: (
+					<ProtectedRoute>
+						<ChefDetails />
+					</ProtectedRoute>
+				),
 			},
 			{
 				path: '/blog',

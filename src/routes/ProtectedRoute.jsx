@@ -1,11 +1,20 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { Navigate, useLocation } from 'react-router-dom';
+import Loading from '../pages/shared/Loading';
+import { AuthContext } from '../providers/AuthProvider';
 
-const ProtectedRoute = () => {
-	return (
-		<div>
-			<h1>ProtectedRoute</h1>
-		</div>
-	);
+const ProtectedRoute = ({ children }) => {
+	const { user, loading } = useContext(AuthContext);
+
+	const location = useLocation();
+
+	if (loading) {
+		return <Loading />;
+	}
+	if (user) {
+		return children;
+	}
+	return <Navigate to='/login' state={{ from: location }} replace />;
 };
 
 export default ProtectedRoute;

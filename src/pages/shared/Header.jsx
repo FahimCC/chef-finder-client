@@ -1,6 +1,18 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link, NavLink } from 'react-router-dom';
+import { AuthContext } from '../../providers/AuthProvider';
+
 const Header = () => {
+	const { user, logOut } = useContext(AuthContext);
+
+	const handleLogOut = () => {
+		logOut()
+			.then(() => {})
+			.catch(err => {
+				console.log(err);
+			});
+	};
+
 	return (
 		<div className='pt-2'>
 			<div className='my-container navbar'>
@@ -46,16 +58,18 @@ const Header = () => {
 									Blog
 								</NavLink>
 							</li>
-							<li>
-								<NavLink
-									to='/login'
-									className={({ isActive }) =>
-										isActive ? 'Active' : 'text-black active:bg-transparent'
-									}
-								>
-									Login
-								</NavLink>
-							</li>
+							{!user && (
+								<li>
+									<NavLink
+										to='/login'
+										className={({ isActive }) =>
+											isActive ? 'Active' : 'text-black active:bg-transparent'
+										}
+									>
+										Login
+									</NavLink>
+								</li>
+							)}
 						</ul>
 					</div>
 				</div>
@@ -106,39 +120,48 @@ const Header = () => {
 									Blog
 								</NavLink>
 							</li>
-							<li>
-								<NavLink
-									to='/login'
-									className={({ isActive }) =>
-										isActive ? 'Active' : 'text-black active:bg-transparent'
-									}
-								>
-									Login
-								</NavLink>
-							</li>
+							{!user && (
+								<li>
+									<NavLink
+										to='/login'
+										className={({ isActive }) =>
+											isActive ? 'Active' : 'text-black active:bg-transparent'
+										}
+									>
+										Login
+									</NavLink>
+								</li>
+							)}
 						</ul>
 					</div>
-					<div
-						className='dropdown dropdown-end px-4 tooltip tooltip-bottom tooltip-warning'
-						data-tip='Fahim Faysal'
-					>
-						<label tabIndex={0} className='btn btn-ghost btn-circle avatar'>
-							<div className='w-10 rounded-full'>
-								<img src='https://www.seekpng.com/png/detail/115-1150622_avatar-demo2x-man-avatar-icon-png.png' />
-							</div>
-						</label>
-						<ul
-							tabIndex={0}
-							className='mt-3 p-2 shadow menu menu-compact dropdown-content bg-base-100 rounded-box w-52'
+					{user && (
+						<div
+							className='dropdown dropdown-end px-2 tooltip tooltip-bottom tooltip-warning'
+							data-tip={user.displayName}
 						>
-							<li>
-								<a>Profile</a>
-							</li>
-							<li>
-								<a>Logout</a>
-							</li>
-						</ul>
-					</div>
+							<label tabIndex={0} className='btn btn-ghost btn-circle avatar'>
+								<div className='w-10 rounded-full'>
+									<img
+										src={
+											user.photoURL ||
+											`https://www.seekpng.com/png/detail/115-1150622_avatar-demo2x-man-avatar-icon-png.png`
+										}
+									/>
+								</div>
+							</label>
+							<ul
+								tabIndex={0}
+								className='mt-3 p-2 shadow menu menu-compact dropdown-content bg-base-100 rounded-box w-52'
+							>
+								<li>
+									<a>Profile</a>
+								</li>
+								<li onClick={handleLogOut}>
+									<a>Logout</a>
+								</li>
+							</ul>
+						</div>
+					)}
 				</div>
 			</div>
 		</div>
