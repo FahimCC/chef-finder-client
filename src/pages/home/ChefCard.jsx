@@ -1,6 +1,6 @@
 import { HandThumbUpIcon } from '@heroicons/react/24/outline';
 import React from 'react';
-// import { SlLike } from 'react-icons/sl';
+import { Link } from 'react-router-dom';
 
 const ChefCard = () => {
 	return (
@@ -18,13 +18,14 @@ const ChefCard = () => {
 				<p>40+ Recipes.</p>
 				<p className='flex items-center'>
 					<span className='mr-2'>
-						{/* <SlLike /> */}
 						<HandThumbUpIcon className='h-6 w-6 ' />
 					</span>
 					<span>400</span>
 				</p>
 				<div className='card-actions justify-end'>
-					<button className='btn-Primary rounded-xl'>View Recipes</button>
+					<button className='btn-Primary rounded-xl'>
+						<Link to='/chef-details'>View Recipes</Link>
+					</button>
 				</div>
 			</div>
 		</div>

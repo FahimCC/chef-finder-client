@@ -1,10 +1,10 @@
 import Lottie from 'lottie-react';
 import React from 'react';
 import { Link, useRouteError } from 'react-router-dom';
-import err from '../../../public/Error.json';
+import err from '../../assets/Error.json';
 
 const ErrorPage = () => {
-	const { error, status } = useRouteError();
+	const { error } = useRouteError();
 	return (
 		<div>
 			<div className='flex flex-col items-center justify-center h-screen font-manrope text-gray'>
