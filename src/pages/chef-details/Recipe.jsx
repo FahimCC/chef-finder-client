@@ -23,7 +23,7 @@ const Recipe = () => {
 				/>
 			</figure>
 			<div className='card-body px-0 py-0'>
-				<h2 className='card-title flex justify-between items-center'>
+				<h2 className='text-2xl font-bold flex justify-between items-center'>
 					Mutton Biriyani
 					<span
 						onClick={handleFavourite}
@@ -36,16 +36,16 @@ const Recipe = () => {
 						)}
 					</span>
 				</h2>
-				<p>Ingredients </p>
-				<ul>
+				<p className='font-bold'>Ingredients </p>
+				<ul className='list-disc list-inside'>
 					<li>Mutton pieces – 500 g</li>
 					<li>Curd – ¼ cup </li>
 					<li>Turmeric powder– ¼ Tsp </li>
 					<li>Salt – ½ tsp</li>
 					<li>Cumin seeds – ½ tsp </li>
 				</ul>
-				<p>Cooking Method</p>
-				<ul>
+				<p className='font-bold'>Cooking Method</p>
+				<ul className='list-disc list-inside'>
 					<li>
 						In a large pressure cooker add 1 tbsp oil and 1 tbsp ghee as it
 						heats add ½ tsp cumin seeds as it begins to splutter add 2 cloves, 1

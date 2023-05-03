@@ -118,7 +118,10 @@ const Header = () => {
 							</li>
 						</ul>
 					</div>
-					<div className='dropdown dropdown-end px-4'>
+					<div
+						className='dropdown dropdown-end px-4 tooltip tooltip-bottom tooltip-warning'
+						data-tip='Fahim Faysal'
+					>
 						<label tabIndex={0} className='btn btn-ghost btn-circle avatar'>
 							<div className='w-10 rounded-full'>
 								<img src='https://www.seekpng.com/png/detail/115-1150622_avatar-demo2x-man-avatar-icon-png.png' />
