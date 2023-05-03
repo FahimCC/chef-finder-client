@@ -1,11 +1,12 @@
 import Lottie from 'lottie-react';
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import login from '../../assets/Login.json';
 import { AuthContext } from '../../providers/AuthProvider';
 
 const Login = () => {
 	const { signIn, googleSignIn, gitHubSignIn } = useContext(AuthContext);
+	const [error, setError] = useState('');
 
 	const navigate = useNavigate();
 	const location = useLocation();
@@ -23,11 +24,13 @@ const Login = () => {
 			.then(result => {
 				const loggedUser = result.user;
 				// console.log(loggedUser);
+				setError('');
 				form.reset();
 				navigate(from, { replace: true });
 			})
 			.catch(err => {
-				console.log(err);
+				setError(err.message);
+				console.log('Error= ', err);
 			});
 	};
 
@@ -81,6 +84,7 @@ const Login = () => {
 								required
 							/>
 						</div>
+						<p className='label-text-alt text-error'>{error}</p>
 						<div className='form-control mt-6'>
 							<button className='btn btn-primary'>Login</button>
 						</div>

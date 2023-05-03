@@ -141,12 +141,7 @@ const Header = () => {
 						>
 							<label tabIndex={0} className='btn btn-ghost btn-circle avatar'>
 								<div className='w-10 rounded-full'>
-									<img
-										src={
-											user.photoURL ||
-											`https://www.seekpng.com/png/detail/115-1150622_avatar-demo2x-man-avatar-icon-png.png`
-										}
-									/>
+									<img src={user.photoURL} />
 								</div>
 							</label>
 							<ul
