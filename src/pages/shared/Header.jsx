@@ -121,7 +121,7 @@ const Header = () => {
 					<div className='dropdown dropdown-end px-4'>
 						<label tabIndex={0} className='btn btn-ghost btn-circle avatar'>
 							<div className='w-10 rounded-full'>
-								<img src='/images/stock/photo-1534528741775-53994a69daeb.jpg' />
+								<img src='https://www.seekpng.com/png/detail/115-1150622_avatar-demo2x-man-avatar-icon-png.png' />
 							</div>
 						</label>
 						<ul

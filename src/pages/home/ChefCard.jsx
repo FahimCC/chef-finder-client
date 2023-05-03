@@ -28,22 +28,6 @@ const ChefCard = () => {
 				</div>
 			</div>
 		</div>
-		// {<div className='card lg:card-side bg-base-100 shadow-xl'>
-		// 	<figure className='w-1/2'>
-		// 		<img
-		// 			src='https://chefclubdhakahome.files.wordpress.com/2020/08/img_20200809_19244519702735.jpg'
-		// 			alt='Chef'
-		// 		/>
-		// 	</figure>
-		// 	<div className='card-body'>
-		// 		<h2 className='card-title'>Mohammed Ali</h2>
-		// 		<p>2 Years of Experience.</p>
-		// 		<p>40+ Recipes.</p>
-		// 		<div className='card-actions justify-end'>
-		// 			<button className='btn-Primary rounded-xl'>View Recipes</button>
-		// 		</div>
-		// 	</div>
-		// </div>}
 	);
 };
 
