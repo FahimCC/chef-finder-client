@@ -7,8 +7,8 @@ const SignIn = () => {
 	return (
 		<div className='hero'>
 			<div className='hero-content flex-col lg:flex-row gap-20'>
-				<div>
-					<Lottie className='h-96' animationData={login} loop={true} />
+				<div className=''>
+					<Lottie className=' h-0 lg:h-96' animationData={login} loop={true} />
 				</div>
 				<div className='card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100'>
 					<div className='card-body'>
