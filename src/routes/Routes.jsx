@@ -3,6 +3,7 @@ import MainLayout from '../layouts/MainLayout';
 import Blog from '../pages/blog/Blog';
 import ChefDetails from '../pages/chef-details/ChefDetails';
 import Home from '../pages/home/Home';
+import ErrorPage from '../pages/shared/ErrorPage';
 import Login from '../pages/sign-up-in/Login';
 import Register from '../pages/sign-up-in/Register';
 
@@ -10,6 +11,7 @@ const router = createBrowserRouter([
 	{
 		path: '/',
 		element: <MainLayout></MainLayout>,
+		errorElement: <ErrorPage />,
 		children: [
 			{
 				path: '/',

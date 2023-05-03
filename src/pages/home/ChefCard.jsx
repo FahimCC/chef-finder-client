@@ -9,7 +9,7 @@ const ChefCard = () => {
 				<img
 					src='https://chefclubdhakahome.files.wordpress.com/2020/08/img_20200809_19244519702735.jpg'
 					alt='Chef'
-					className='rounded-xl'
+					className='rounded-xl h-80 w-full'
 				/>
 			</figure>
 			<div className='card-body items-center text-center'>
