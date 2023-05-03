@@ -14,3 +14,6 @@
 .btn-Primary {
 	@apply py-4 px-7 bg-gradient-to-r from-primary to-secondary text-black font-bold transform active:scale-95 transition-transform;
 }
+.link-Hover:hover {
+	@apply text-transparent bg-clip-text bg-gradient-to-r from-red to-secondary;
+}
