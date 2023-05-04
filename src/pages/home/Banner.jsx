@@ -1,4 +1,5 @@
 import React from 'react';
+import banner from '../../assets/banner.jpg';
 
 const Banner = () => {
 	return (
@@ -6,7 +7,7 @@ const Banner = () => {
 			<div
 				className='flex justify-center items-center'
 				style={{
-					backgroundImage: "url('/src/assets/banner.jpg')",
+					backgroundImage: `url(${banner})`,
 					height: '70vh',
 					width: '100%',
 					backgroundSize: 'cover',

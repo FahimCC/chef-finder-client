@@ -6,4 +6,4 @@
 - Profile shows 3 recipes. The recipes contain a name, an image, ingredients, cooking method, ratings and a favourite button.
 - It also has a login and registration page. If a user is not signed up than chef profile can not be seen.
 
-## Live site link [ChefFinder]()
+## Live site link [ChefFinder](https://chef-finder-client.web.app/)

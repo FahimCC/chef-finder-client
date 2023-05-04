@@ -5,6 +5,7 @@ import LazyLoad from 'react-lazy-load';
 import { useLoaderData, useParams } from 'react-router-dom';
 import SectionTitle from '../shared/SectionTitle';
 import Recipe from './Recipe';
+import banner from '../../assets/banner2.jpg';
 
 const ChefDetails = () => {
 	const [chef, setChef] = useState({});
@@ -26,14 +27,14 @@ const ChefDetails = () => {
 	}, []);
 
 	const { name, likes, years_of_experience, bio, num_recipes, picture } = chef;
-	console.log('hey', chef);
+	// console.log('hey', chef);
 
 	return (
 		<div>
 			<div
 				className='flex justify-center items-center w-full mt-2'
 				style={{
-					backgroundImage: "url('/src/assets/banner2.jpg')",
+					backgroundImage: `url(${banner})`,
 					height: '60vh',
 					width: '100%',
 					backgroundSize: 'cover',
@@ -59,7 +60,7 @@ const ChefDetails = () => {
 						</p>
 					</div>
 					<figure className='px-5'>
-						<LazyLoad height={288} width={288}>
+						<LazyLoad height={288} width={288} offset={200}>
 							<img
 								src={picture}
 								alt='Chef'

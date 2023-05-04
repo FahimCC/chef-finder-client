@@ -34,6 +34,7 @@ const Login = () => {
 			});
 	};
 
+	//google signIn
 	const handleGoogle = () => {
 		googleSignIn()
 			.then(result => {
@@ -46,6 +47,7 @@ const Login = () => {
 			});
 	};
 
+	//github signIn
 	const handleGitHub = () => {
 		gitHubSignIn()
 			.then(result => {
