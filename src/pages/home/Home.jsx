@@ -1,4 +1,5 @@
 import React from 'react';
+import { useLoaderData } from 'react-router-dom';
 import SectionTitle from '../shared/SectionTitle';
 import Banner from './Banner';
 import ChefCard from './ChefCard';
@@ -6,17 +7,16 @@ import FeaturedFood from './FeaturedFood';
 import HappyCustomers from './HappyCustomers';
 
 const Home = () => {
+	const chefs = useLoaderData();
+
 	return (
 		<div>
 			<Banner />
 			<SectionTitle>Meet Our Chefs</SectionTitle>
 			<div className='my-container grid md:grid-cols-2 lg:grid-cols-3 gap-10'>
-				<ChefCard></ChefCard>
-				<ChefCard></ChefCard>
-				<ChefCard></ChefCard>
-				<ChefCard></ChefCard>
-				<ChefCard></ChefCard>
-				<ChefCard></ChefCard>
+				{chefs.map(chef => (
+					<ChefCard key={chef.id} chef={chef}></ChefCard>
+				))}
 			</div>
 			<SectionTitle>Featured Food</SectionTitle>
 			<div className='my-container grid md:grid-cols-2 lg:grid-cols-3 gap-10'>

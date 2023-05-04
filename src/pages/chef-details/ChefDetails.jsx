@@ -1,6 +1,7 @@
 import React from 'react';
 import { SlLike } from 'react-icons/sl';
 import { TbChefHat } from 'react-icons/tb';
+import LazyLoad from 'react-lazy-load';
 import SectionTitle from '../shared/SectionTitle';
 import Recipe from './Recipe';
 
@@ -40,11 +41,13 @@ const ChefDetails = () => {
 						</p>
 					</div>
 					<figure className='px-5'>
-						<img
-							src='https://chefclubdhakahome.files.wordpress.com/2020/08/img_20200809_19244519702735.jpg'
-							alt='Chef'
-							className='rounded-3xl w-72 h-72 border-2 border-secondary'
-						/>
+						<LazyLoad height={288} width={288}>
+							<img
+								src='https://chefclubdhakahome.files.wordpress.com/2020/08/img_20200809_19244519702735.jpg'
+								alt='Chef'
+								className='rounded-3xl w-72 h-72 border-2 border-secondary'
+							/>
+						</LazyLoad>
 					</figure>
 				</div>
 			</div>
