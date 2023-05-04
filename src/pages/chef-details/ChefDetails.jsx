@@ -2,10 +2,12 @@ import React from 'react';
 import { SlLike } from 'react-icons/sl';
 import { TbChefHat } from 'react-icons/tb';
 import LazyLoad from 'react-lazy-load';
+import { useLoaderData } from 'react-router-dom';
 import SectionTitle from '../shared/SectionTitle';
 import Recipe from './Recipe';
 
 const ChefDetails = () => {
+	const recipes = useLoaderData();
 	return (
 		<div>
 			<div
@@ -53,9 +55,9 @@ const ChefDetails = () => {
 			</div>
 			<SectionTitle>Recipes</SectionTitle>
 			<div className='my-container space-y-5'>
-				<Recipe />
-				<Recipe />
-				<Recipe />
+				{recipes.map(recipe => (
+					<Recipe key={recipe.id} recipe={recipe}/>
+				))}
 			</div>
 		</div>
 	);

@@ -4,7 +4,7 @@ import { TbChefHat } from 'react-icons/tb';
 import { Link } from 'react-router-dom';
 
 const ChefCard = ({ chef }) => {
-	const { name, picture, years_of_experience, likes, num_recipes } = chef;
+	const { id, name, picture, years_of_experience, likes, num_recipes } = chef;
 	return (
 		<div className='card bg-base-100 border border-primary hover:border-2 hover:border-secondary'>
 			<figure className='px-5 pt-5'>
@@ -25,7 +25,7 @@ const ChefCard = ({ chef }) => {
 				</p>
 				<div className='card-actions justify-end'>
 					<button className='btn-Primary rounded-xl'>
-						<Link to='/chef-details'>View Recipes</Link>
+						<Link to={`/chef-details/${id}`}>View Recipes</Link>
 					</button>
 				</div>
 			</div>

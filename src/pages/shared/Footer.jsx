@@ -40,8 +40,12 @@ const Footer = () => {
 				</div>
 				<div className='flex flex-col space-y-3 mt-2'>
 					<span className='footer-title mt-5 lg:mt-0'>Resources</span>
-					<Link className='link-Hover'>Home</Link>
-					<Link className='link-Hover'>Blog</Link>
+					<Link to='/' className='link-Hover'>
+						Home
+					</Link>
+					<Link to='/blog' className='link-Hover'>
+						Blog
+					</Link>
 					<Link className='link-Hover'>About Us</Link>
 				</div>
 				<div className='flex flex-col space-y-3 mt-2'>
@@ -61,7 +65,7 @@ const Footer = () => {
 								d='M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z'
 							/>
 						</svg>
-						<Link className='link-Hover'>+88 01724-XXXXXX</Link>
+						<p className='link-Hover'>+88 01724-XXXXXX</p>
 					</span>
 					<span className='flex items-center justify-center md:justify-start'>
 						<svg
@@ -79,7 +83,7 @@ const Footer = () => {
 							/>
 						</svg>
 
-						<Link className='link-Hover'>chef.finder@gmail.com</Link>
+						<p className='link-Hover'>chef.finder@gmail.com</p>
 					</span>
 					<span className='flex items-center justify-center md:justify-start'>
 						<svg
@@ -96,7 +100,7 @@ const Footer = () => {
 								d='M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z'
 							/>
 						</svg>
-						<Link className='link-Hover'>Mon - Tue : 09:00 - 18:00</Link>
+						<p className='link-Hover'>Mon - Tue : 09:00 - 18:00</p>
 					</span>
 				</div>
 			</div>

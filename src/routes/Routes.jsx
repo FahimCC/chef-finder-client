@@ -21,12 +21,16 @@ const router = createBrowserRouter([
 					fetch('https://chef-finder-server-fahimcc.vercel.app/chefs'),
 			},
 			{
-				path: '/chef-details',
+				path: '/chef-details/:id',
 				element: (
 					<ProtectedRoute>
 						<ChefDetails />
 					</ProtectedRoute>
 				),
+				loader: ({ params }) =>
+					fetch(
+						`https://chef-finder-server-fahimcc.vercel.app/chefs/${params.id}`
+					),
 			},
 			{
 				path: '/blog',
