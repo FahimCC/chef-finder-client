@@ -1,3 +1,4 @@
+import { Rating } from '@smastrom/react-rating';
 import React, { useState } from 'react';
 import toast from 'react-hot-toast';
 import { GrFavorite } from 'react-icons/gr';
@@ -44,34 +45,7 @@ const Recipe = ({ recipe }) => {
 				<p className='font-bold'>Cooking Method</p>
 				<p>{cooking_method}</p>
 				<div className='card-actions justify-center mt-5'>
-					<div className='rating'>
-						<input
-							type='radio'
-							name='rating-2'
-							className='mask mask-star-2 bg-orange-400'
-						/>
-						<input
-							type='radio'
-							name='rating-2'
-							className='mask mask-star-2 bg-orange-400'
-							checked
-						/>
-						<input
-							type='radio'
-							name='rating-2'
-							className='mask mask-star-2 bg-orange-400'
-						/>
-						<input
-							type='radio'
-							name='rating-2'
-							className='mask mask-star-2 bg-orange-400'
-						/>
-						<input
-							type='radio'
-							name='rating-2'
-							className='mask mask-star-2 bg-orange-400'
-						/>
-					</div>
+					<Rating style={{ maxWidth: 180 }} value={rating} readOnly />
 				</div>
 			</div>
 		</div>
