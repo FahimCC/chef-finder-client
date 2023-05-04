@@ -37,8 +37,8 @@ const Recipe = ({ recipe }) => {
 				</h2>
 				<p className='font-bold'>Ingredients </p>
 				<ul className='list-disc list-inside'>
-					{ingredients.map(ing => (
-						<li>{ing}</li>
+					{ingredients.map((ing, index) => (
+						<li key={index}>{ing}</li>
 					))}
 				</ul>
 				<p className='font-bold'>Cooking Method</p>
