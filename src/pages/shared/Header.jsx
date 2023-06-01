@@ -15,7 +15,7 @@ const Header = () => {
 
 	return (
 		<div className='pt-2'>
-			<div className='my-container navbar'>
+			<div className='container navbar'>
 				<div className='navbar-start  lg:hidden'>
 					<div className='dropdown'>
 						<label tabIndex={0} className='btn btn-ghost lg:hidden'>

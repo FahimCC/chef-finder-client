@@ -19,14 +19,14 @@ const Recipe = ({ recipe }) => {
 
 	return (
 		<div className='card lg:card-side bg-base-100 shadow-xl p-5 md:px-10 gap-7'>
-			<figure className='w-2/5 h-96 rounded-lg'>
+			<figure className='w-full lg:w-2/5 lg:h-96 rounded-lg'>
 				<img
 					className='rounded-lg w-full h-full'
 					src={recipe_photo_url}
 					alt='Food'
 				/>
 			</figure>
-			<div className='w-3/5 card-body px-0 py-0'>
+			<div className='w-full lg:w-3/5 card-body px-0 py-0'>
 				<h2 className='text-2xl font-bold flex justify-between items-center'>
 					{recipe_name}
 					<span

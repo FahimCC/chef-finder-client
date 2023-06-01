@@ -3,9 +3,9 @@ import { SlLike } from 'react-icons/sl';
 import { TbChefHat } from 'react-icons/tb';
 import LazyLoad from 'react-lazy-load';
 import { useLoaderData, useParams } from 'react-router-dom';
+import banner from '../../assets/banner2.jpg';
 import SectionTitle from '../shared/SectionTitle';
 import Recipe from './Recipe';
-import banner from '../../assets/banner2.jpg';
 
 const ChefDetails = () => {
 	const [chef, setChef] = useState({});
@@ -32,10 +32,9 @@ const ChefDetails = () => {
 	return (
 		<div>
 			<div
-				className='flex justify-center items-center w-full mt-2'
+				className='flex justify-center items-center w-full mt-2 h-fit'
 				style={{
 					backgroundImage: `url(${banner})`,
-					height: '60vh',
 					width: '100%',
 					backgroundSize: 'cover',
 					backgroundPosition: 'center center',
@@ -43,35 +42,37 @@ const ChefDetails = () => {
 					backgroundColor: '#606060',
 				}}
 			>
-				<div className='my-container flex justify-center items-center gap-10'>
-					<div className='max-w-lg text-white'>
-						<h2 className='text-3xl font-bold'>{name}</h2>
-						<h3 className='text-lg font-medium'>
-							{years_of_experience} Years of experience
-						</h3>
-						<p className='max-w-lg my-5'>{bio}</p>
-						<p className='flex gap-5 font-bold'>
-							<span className='flex items-center gap-2'>
-								<SlLike /> {likes} Likes
-							</span>
-							<span className='flex items-center gap-2'>
-								<TbChefHat /> {num_recipes} Recipes
-							</span>
-						</p>
+				<div className='container'>
+					<div className='flex flex-col-reverse py-5 lg:py-10 md:flex-row justify-center items-center gap-10'>
+						<div className='max-w-lg text-white'>
+							<h2 className='text-3xl font-bold'>{name}</h2>
+							<h3 className='text-lg font-medium'>
+								{years_of_experience} Years of experience
+							</h3>
+							<p className='max-w-lg my-5'>{bio}</p>
+							<p className='flex gap-5 font-bold'>
+								<span className='flex items-center gap-2'>
+									<SlLike /> {likes} Likes
+								</span>
+								<span className='flex items-center gap-2'>
+									<TbChefHat /> {num_recipes} Recipes
+								</span>
+							</p>
+						</div>
+						<figure className='px-5'>
+							<LazyLoad height={288} width={288} offset={200}>
+								<img
+									src={picture}
+									alt='Chef'
+									className='rounded-3xl w-72 h-72 border-2 border-secondary'
+								/>
+							</LazyLoad>
+						</figure>
 					</div>
-					<figure className='px-5'>
-						<LazyLoad height={288} width={288} offset={200}>
-							<img
-								src={picture}
-								alt='Chef'
-								className='rounded-3xl w-72 h-72 border-2 border-secondary'
-							/>
-						</LazyLoad>
-					</figure>
 				</div>
 			</div>
 			<SectionTitle>Recipes</SectionTitle>
-			<div className='my-container space-y-5'>
+			<div className='container space-y-5'>
 				{recipes.map(recipe => (
 					<Recipe key={recipe.id} recipe={recipe} />
 				))}

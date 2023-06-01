@@ -3,7 +3,7 @@ import React from 'react';
 
 const HappyCustomers = () => {
 	return (
-		<div className='my-container grid grid-cols-1 md:grid-cols-2 gap-10'>
+		<div className='container grid grid-cols-1 md:grid-cols-2 gap-10'>
 			<div className='flex flex-col items-center'>
 				<ChatBubbleLeftRightIcon className='w-10 h-10 p-2 rounded-full bg-[#fd6d24] text-white my-5' />
 				<p className='max-w-lg text-center'>
